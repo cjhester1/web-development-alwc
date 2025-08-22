@@ -47,9 +47,9 @@ const HeroSection = () => {
             </Button>
             <Button
               asChild
-              variant="outline"
+              variant="secondary"
               size="lg"
-              className="text-lg px-8 py-6 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary btn-hover-lift"
+              className="text-lg px-8 py-6 btn-hover-lift"
             >
               <Link to="/media">
                 Watch Latest Message

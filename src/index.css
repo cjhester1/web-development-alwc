@@ -49,9 +49,27 @@ All colors MUST be HSL.
     --card-shadow: 0 4px 20px -2px hsl(210 45% 25% / 0.1);
     --hero-shadow: 0 10px 40px -10px hsl(210 45% 25% / 0.3);
     
+    /* Futuristic 3D Design Elements */
+    --gradient-3d: linear-gradient(145deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-button: linear-gradient(145deg, hsl(var(--accent)), hsl(var(--accent-hover)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted) / 0.3));
+    --shadow-3d: 
+      0 4px 15px -3px hsl(var(--primary) / 0.1),
+      0 2px 6px -2px hsl(var(--primary) / 0.05),
+      inset 0 1px 0 hsl(var(--background) / 0.1);
+    --shadow-hover: 
+      0 8px 25px -5px hsl(var(--primary) / 0.15),
+      0 4px 12px -2px hsl(var(--primary) / 0.1),
+      inset 0 1px 0 hsl(var(--background) / 0.2);
+    --shadow-button: 
+      0 4px 14px -2px hsl(var(--accent) / 0.3),
+      0 2px 8px -1px hsl(var(--accent) / 0.2),
+      inset 0 1px 0 hsl(255 255 255 / 0.1);
+    
     /* Typography */
     --font-display: 'Dancing Script', cursive;
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-3d: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
     --radius: 0.5rem;
 
@@ -109,6 +127,18 @@ All colors MUST be HSL.
     --section-bg: linear-gradient(180deg, hsl(210 40% 8%), hsl(210 35% 10%));
     --card-shadow: 0 4px 20px -2px hsl(0 0% 0% / 0.3);
     --hero-shadow: 0 10px 40px -10px hsl(0 0% 0% / 0.5);
+    
+    /* Dark mode 3D elements */
+    --gradient-3d: linear-gradient(145deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted) / 0.2));
+    --shadow-3d: 
+      0 4px 15px -3px hsl(0 0% 0% / 0.4),
+      0 2px 6px -2px hsl(0 0% 0% / 0.3),
+      inset 0 1px 0 hsl(255 255 255 / 0.05);
+    --shadow-hover: 
+      0 8px 25px -5px hsl(0 0% 0% / 0.5),
+      0 4px 12px -2px hsl(0 0% 0% / 0.4),
+      inset 0 1px 0 hsl(255 255 255 / 0.1);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -148,22 +178,105 @@ All colors MUST be HSL.
   }
 
   .card-elegant {
-    background: hsl(var(--card));
-    box-shadow: var(--card-shadow);
-    @apply rounded-2xl border border-border;
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-3d);
+    @apply rounded-2xl border border-border/50;
+    backdrop-filter: blur(10px);
+  }
+
+  .card-3d {
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-3d);
+    @apply rounded-2xl border border-border/30;
+    backdrop-filter: blur(12px);
+    transform: translateZ(0);
+    transition: var(--transition-3d);
+  }
+
+  .card-3d:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px) translateZ(0);
   }
 
   .transition-smooth {
     transition: var(--transition-smooth);
   }
 
-  /* Button Hover Effects */
+  .transition-3d {
+    transition: var(--transition-3d);
+  }
+
+  /* Enhanced Button Effects */
   .btn-hover-lift {
-    @apply transition-smooth hover:scale-105 hover:shadow-lg;
+    @apply transition-3d hover:scale-105;
+    box-shadow: var(--shadow-3d);
+  }
+
+  .btn-hover-lift:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-1px) scale(1.05);
   }
 
   .btn-hero {
-    @apply bg-accent text-accent-foreground hover:bg-accent-hover;
-    box-shadow: var(--hero-shadow);
+    background: var(--gradient-button);
+    @apply text-accent-foreground;
+    box-shadow: var(--shadow-button);
+    border: 1px solid hsl(var(--accent-hover));
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-hero:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-1px);
+  }
+
+  .btn-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, hsl(255 255 255 / 0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  .btn-hero:hover::before {
+    left: 100%;
+  }
+
+  /* Paris-inspired elegant elements */
+  .text-elegant {
+    @apply font-display text-gradient;
+    text-shadow: 0 2px 4px hsl(var(--primary) / 0.1);
+  }
+
+  .border-elegant {
+    border-image: linear-gradient(45deg, hsl(var(--accent)), hsl(var(--primary))) 1;
+  }
+
+  /* Media hover effects */
+  .media-hover {
+    @apply transition-3d overflow-hidden rounded-xl;
+    box-shadow: var(--shadow-3d);
+  }
+
+  .media-hover:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-3px) scale(1.02);
+  }
+
+  .media-hover::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, hsl(var(--accent) / 0.1) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .media-hover:hover::after {
+    opacity: 1;
   }
 }

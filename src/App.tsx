@@ -12,6 +12,8 @@ import Resources from "./pages/Resources";
 import Give from "./pages/Give";
 import Youth from "./pages/ministries/Youth";
 import Children from "./pages/ministries/Children";
+import Music from "./pages/ministries/Music";
+import Prayer from "./pages/ministries/Prayer";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +34,8 @@ const App = () => (
           <Route path="/give" element={<Give />} />
           <Route path="/ministries/youth" element={<Youth />} />
           <Route path="/ministries/children" element={<Children />} />
+          <Route path="/ministries/music" element={<Music />} />
+          <Route path="/ministries/prayer" element={<Prayer />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

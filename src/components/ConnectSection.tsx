@@ -139,24 +139,30 @@ const ConnectSection = () => {
               </div>
             </div>
             <div className="text-center md:text-right">
-              <div className="bg-card rounded-2xl p-6 card-elegant">
-                <h4 className="text-2xl font-bold text-foreground mb-2">
-                  Take the Next Step
-                </h4>
-                <p className="text-muted-foreground mb-6">
-                  Ready to grow deeper in your faith journey?
-                </p>
-                <div className="space-y-3">
-                  <Button asChild className="w-full btn-hover-lift">
-                    <Link to="/give">
-                      Partner with Us <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
-                  <Button asChild variant="outline" className="w-full btn-hover-lift">
-                    <Link to="/ministries">
-                      Join a Ministry
-                    </Link>
-                  </Button>
+              <div className="neuro-card p-8 relative overflow-hidden">
+                {/* Decorative elements */}
+                <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-accent/10 to-transparent rounded-full blur-xl"></div>
+                <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-primary/10 to-transparent rounded-full blur-xl"></div>
+                
+                <div className="relative z-10">
+                  <h4 className="text-2xl font-bold text-foreground mb-3">
+                    Take the Next Step
+                  </h4>
+                  <p className="text-muted-foreground mb-8 leading-relaxed">
+                    Ready to grow deeper in your faith journey?
+                  </p>
+                  <div className="space-y-4">
+                    <Button asChild className="w-full btn-hero btn-hover-lift text-base font-semibold py-6">
+                      <Link to="/give">
+                        Partner with Us <ArrowRight className="ml-2 h-5 w-5" />
+                      </Link>
+                    </Button>
+                    <Button asChild variant="outline" className="w-full btn-neuro text-base font-semibold py-6">
+                      <Link to="/ministries">
+                        Join a Ministry
+                      </Link>
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>

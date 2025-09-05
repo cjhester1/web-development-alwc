@@ -6,10 +6,27 @@ import heroImage from "@/assets/hero-church.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary via-primary-light to-primary-glow overflow-hidden pt-20">
-      {/* Background Video/Image with Overlay */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 hero-enhanced">
+      {/* Animated Background Elements */}
       <div className="absolute inset-0">
-        {/* Video Background - Can be enabled */}
+        {/* Dynamic Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-accent animate-gradient"></div>
+        
+        {/* Floating Orbs */}
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-accent/20 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-primary-glow/30 rounded-full blur-3xl animate-float animation-delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 w-48 h-48 bg-community/10 rounded-full blur-2xl animate-float animation-delay-2000"></div>
+        
+        {/* Subtle Pattern Overlay */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 25% 25%, white 1px, transparent 1px),
+                            radial-gradient(circle at 75% 75%, white 1px, transparent 1px)`,
+            backgroundSize: '50px 50px'
+          }}></div>
+        </div>
+
+        {/* Video Background - Ready for implementation */}
         {/* <video 
           autoPlay 
           loop 
@@ -24,9 +41,9 @@ const HeroSection = () => {
         <img
           src={heroImage}
           alt="Abundant Life Worship sanctuary"
-          className="w-full h-full object-cover opacity-25"
+          className="w-full h-full object-cover opacity-15 mix-blend-overlay"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/75 to-primary/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-transparent to-primary/80"></div>
       </div>
 
       {/* Content */}
@@ -75,8 +92,8 @@ const HeroSection = () => {
           {/* Service Info Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto px-4 mb-16 sm:mb-20">
             {/* Sunday Service */}
-            <Card className="card-elegant bg-card/95 backdrop-blur-sm animate-slide-up">
-              <CardContent className="p-4 sm:p-6">
+            <Card className="neuro-card bg-card/98 backdrop-blur-md animate-slide-up border-0">
+              <CardContent className="p-6 sm:p-8">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-lg sm:text-xl font-semibold text-card-foreground">
                     Sunday Worship
@@ -93,7 +110,7 @@ const HeroSection = () => {
                     <span>1435 Glenn St, Vallejo CA</span>
                   </div>
                 </div>
-                <Button asChild className="w-full mt-4 btn-hover-lift text-sm sm:text-base">
+                <Button asChild className="w-full mt-6 btn-hero btn-hover-lift text-sm sm:text-base font-semibold py-3">
                   <Link to="/media">
                     Join Online Service
                   </Link>
@@ -102,8 +119,8 @@ const HeroSection = () => {
             </Card>
 
             {/* Life Groups */}
-            <Card className="card-elegant bg-card/95 backdrop-blur-sm animate-slide-up">
-              <CardContent className="p-4 sm:p-6">
+            <Card className="neuro-card bg-card/98 backdrop-blur-md animate-slide-up border-0">
+              <CardContent className="p-6 sm:p-8">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-lg sm:text-xl font-semibold text-card-foreground">
                     Life Groups
@@ -120,7 +137,7 @@ const HeroSection = () => {
                     Various times throughout the week
                   </p>
                 </div>
-                <Button asChild variant="outline" className="w-full mt-4 btn-hover-lift text-sm sm:text-base">
+                <Button asChild variant="outline" className="w-full mt-6 btn-neuro text-sm sm:text-base font-semibold py-3">
                   <Link to="/connect">
                     Join a Life Group
                   </Link>

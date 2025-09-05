@@ -121,7 +121,15 @@ export default {
 				'scale-in': 'scale-in 0.4s ease-out',
 				'float': 'float 3s ease-in-out infinite',
 				'shimmer': 'shimmer 2s linear infinite',
-				'glow': 'glow 2s ease-in-out infinite alternate'
+				'glow': 'glow 2s ease-in-out infinite alternate',
+				'gradient': 'gradient 8s ease infinite'
+			},
+			animationDelay: {
+				'300': '300ms',
+				'500': '500ms',
+				'700': '700ms',
+				'1000': '1000ms',
+				'2000': '2000ms',
 			}
 		}
 	},

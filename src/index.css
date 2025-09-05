@@ -269,10 +269,10 @@ All colors MUST be HSL.
 
   .neuro-card:hover {
     box-shadow: 
-      16px 16px 32px hsl(var(--muted) / 0.5),
-      -16px -16px 32px hsl(var(--background) / 0.9),
-      inset 2px 2px 6px hsl(var(--background) / 0.15);
-    transform: translateY(-2px);
+      8px 8px 16px hsl(var(--muted) / 0.25),
+      -8px -8px 16px hsl(var(--background) / 0.6),
+      inset 1px 1px 3px hsl(var(--background) / 0.1);
+    transform: translateY(-1px);
   }
 
   .btn-neuro {

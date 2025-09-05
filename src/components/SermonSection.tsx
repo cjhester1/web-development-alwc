@@ -6,7 +6,7 @@ import { Play, Calendar, Clock, User, ArrowRight } from "lucide-react";
 
 const SermonSection = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-16 sm:py-20 lg:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">

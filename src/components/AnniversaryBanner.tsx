@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 
 const AnniversaryBanner = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/3 via-accent/3 to-community/3">
+    <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/3 via-accent/3 to-community/3">
       <div className="max-w-6xl mx-auto">
         <Card className="card-3d overflow-hidden bg-gradient-to-br from-card via-card/95 to-muted/50 border-2 border-accent/30 shadow-2xl">
           <CardContent className="p-8 sm:p-12 lg:p-16 relative">

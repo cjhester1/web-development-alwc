@@ -5,10 +5,10 @@ import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Youtube } from "lucide
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-primary-foreground">
+    <footer className="bg-primary text-primary-foreground mt-16 sm:mt-20 lg:mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="py-16">
+        <div className="py-16 sm:py-20">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Church Info */}
             <div className="lg:col-span-2">
@@ -156,7 +156,7 @@ const Footer = () => {
         <Separator className="bg-primary-foreground/20" />
 
         {/* Bottom Footer */}
-        <div className="py-6">
+        <div className="py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-primary-foreground/70 text-sm">
               © 2024 Abundant Life Worship. All rights reserved.

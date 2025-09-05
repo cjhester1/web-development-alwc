@@ -138,13 +138,13 @@ const ConnectSection = () => {
                 </div>
               </div>
             </div>
-            <div className="text-center md:text-right">
-              <div className="neuro-card p-8 relative overflow-hidden">
+            <div className="flex justify-center md:justify-end">
+              <div className="neuro-card p-8 relative overflow-hidden max-w-md w-full">
                 {/* Decorative elements */}
                 <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-accent/10 to-transparent rounded-full blur-xl"></div>
                 <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-primary/10 to-transparent rounded-full blur-xl"></div>
                 
-                <div className="relative z-10">
+                <div className="relative z-10 text-center">
                   <h4 className="text-2xl font-bold text-foreground mb-3">
                     Take the Next Step
                   </h4>

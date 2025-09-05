@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Church Theme Colors - Clean Navy & Blue Palette */
+    /* Abundant Life Worship Center Brand Colors */
     --background: 0 0% 99%;
     --foreground: 210 40% 15%;
 
@@ -18,36 +18,40 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 210 40% 15%;
 
-    /* Primary Navy - Professional church blue */
-    --primary: 210 45% 25%;
+    /* Primary Dark Blue - Church */
+    --primary: 230 85% 32%; /* #0b2a98 */
     --primary-foreground: 0 0% 98%;
-    --primary-light: 210 35% 35%;
-    --primary-glow: 210 55% 45%;
+    --primary-light: 230 85% 45%;
+    --primary-glow: 230 85% 88%;
 
-    /* Secondary Light Blue - Accent color */
+    /* Secondary Light */
     --secondary: 200 45% 85%;
-    --secondary-foreground: 210 45% 25%;
+    --secondary-foreground: 230 85% 32%;
 
     --muted: 210 25% 95%;
     --muted-foreground: 210 15% 55%;
 
-    /* Accent Blue - Call to action */
-    --accent: 200 75% 55%;
-    --accent-foreground: 0 0% 98%;
-    --accent-hover: 200 75% 45%;
+    /* Accent Deep Gold - Marketplace */
+    --accent: 43 63% 60%; /* #d8af5b */
+    --accent-foreground: 210 40% 15%;
+    --accent-hover: 43 63% 70%;
+
+    /* Community Dark Red */
+    --community: 359 99% 21%; /* #6c0001 */
+    --community-foreground: 0 0% 98%;
 
     --destructive: 0 75% 55%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 210 20% 88%;
     --input: 210 20% 92%;
-    --ring: 210 45% 25%;
+    --ring: 230 85% 32%;
 
-    /* Church-specific design tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(210 45% 25%), hsl(200 55% 35%));
-    --section-bg: linear-gradient(180deg, hsl(0 0% 99%), hsl(210 15% 97%));
-    --card-shadow: 0 4px 20px -2px hsl(210 45% 25% / 0.1);
-    --hero-shadow: 0 10px 40px -10px hsl(210 45% 25% / 0.3);
+    /* Abundant Life brand gradients */
+    --hero-gradient: linear-gradient(135deg, hsl(230 85% 32%), hsl(43 63% 60%), hsl(359 99% 21%));
+    --section-bg: linear-gradient(180deg, hsl(0 0% 99%), hsl(230 85% 98%));
+    --card-shadow: 0 4px 20px -2px hsl(230 85% 32% / 0.1);
+    --hero-shadow: 0 10px 40px -10px hsl(230 85% 32% / 0.3);
     
     /* Futuristic 3D Design Elements */
     --gradient-3d: linear-gradient(145deg, hsl(var(--primary)), hsl(var(--primary-light)));
@@ -100,10 +104,10 @@ All colors MUST be HSL.
     --popover: 210 35% 12%;
     --popover-foreground: 210 15% 92%;
 
-    --primary: 200 75% 55%;
+    --primary: 230 85% 45%; /* Lighter for dark mode */
     --primary-foreground: 210 40% 8%;
-    --primary-light: 200 65% 65%;
-    --primary-glow: 200 85% 65%;
+    --primary-light: 230 85% 55%;
+    --primary-glow: 230 85% 65%;
 
     --secondary: 210 25% 20%;
     --secondary-foreground: 210 15% 85%;
@@ -111,20 +115,23 @@ All colors MUST be HSL.
     --muted: 210 25% 15%;
     --muted-foreground: 210 15% 65%;
 
-    --accent: 200 75% 55%;
+    --accent: 43 63% 70%; /* Brighter for dark mode */
     --accent-foreground: 210 40% 8%;
-    --accent-hover: 200 75% 45%;
+    --accent-hover: 43 63% 80%;
+
+    --community: 359 99% 35%; /* Lighter for dark mode */
+    --community-foreground: 210 15% 92%;
 
     --destructive: 0 75% 55%;
     --destructive-foreground: 210 15% 92%;
 
     --border: 210 25% 18%;
     --input: 210 25% 18%;
-    --ring: 200 75% 55%;
+    --ring: 230 85% 45%;
 
     /* Dark mode gradients */
-    --hero-gradient: linear-gradient(135deg, hsl(210 35% 12%), hsl(200 45% 20%));
-    --section-bg: linear-gradient(180deg, hsl(210 40% 8%), hsl(210 35% 10%));
+    --hero-gradient: linear-gradient(135deg, hsl(230 85% 45%), hsl(43 63% 70%), hsl(359 99% 35%));
+    --section-bg: linear-gradient(180deg, hsl(210 40% 8%), hsl(230 85% 15%));
     --card-shadow: 0 4px 20px -2px hsl(0 0% 0% / 0.3);
     --hero-shadow: 0 10px 40px -10px hsl(0 0% 0% / 0.5);
     

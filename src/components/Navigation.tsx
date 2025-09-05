@@ -35,32 +35,34 @@ const Navigation = () => {
     <nav
       className={`fixed top-0 w-full z-50 transition-smooth ${
         isScrolled
-          ? "bg-primary/95 backdrop-blur-sm shadow-lg"
-          : "bg-primary"
+          ? "bg-primary/96 backdrop-blur-md shadow-xl border-b border-primary-light/20"
+          : "bg-primary/98 backdrop-blur-sm"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link
             to="/"
-            className="flex items-center space-x-3 text-primary-foreground hover:opacity-90 transition-smooth"
+            className="flex items-center space-x-4 text-primary-foreground hover:opacity-90 transition-smooth"
           >
-            <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center">
-              <span className="text-accent-foreground font-bold text-sm">AL</span>
+            <div className="w-10 h-10 bg-gradient-to-br from-accent to-accent-hover rounded-xl flex items-center justify-center shadow-lg">
+              <span className="text-accent-foreground font-bold text-base">AL</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-semibold text-lg leading-tight">Abundant Life</span>
-              <span className="text-xs opacity-90 -mt-1">Worship</span>
+              <span className="font-bold text-xl leading-tight">Abundant Life</span>
+              <span className="text-sm opacity-90 -mt-0.5 font-medium">Worship Center</span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             <Link
               to="/"
-              className={`text-sm font-medium transition-smooth hover:text-accent ${
-                isActive("/") ? "text-accent" : "text-primary-foreground"
+              className={`text-sm font-semibold transition-smooth hover:text-accent relative ${
+                isActive("/") ? "text-accent" : "text-primary-foreground/90"
+              } after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-accent after:transition-all hover:after:w-full ${
+                isActive("/") ? "after:w-full" : ""
               }`}
             >
               Home
@@ -129,17 +131,17 @@ const Navigation = () => {
               Resources
             </Link>
 
-            <Button asChild variant="secondary" size="sm" className="btn-hover-lift">
+            <Button asChild variant="secondary" size="default" className="btn-hover-lift font-semibold">
               <Link to="/give">Give</Link>
             </Button>
 
-            <Button asChild size="sm" className="btn-hero btn-hover-lift">
+            <Button asChild size="default" className="btn-hero btn-hover-lift font-semibold px-6">
               <Link to="/connect">Plan a Visit</Link>
             </Button>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <Button
               variant="ghost"
               size="sm"
@@ -153,7 +155,7 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-primary border-t border-primary-light">
+          <div className="lg:hidden bg-primary/98 backdrop-blur-md border-t border-primary-light/30">
             <div className="px-2 pt-2 pb-3 space-y-1">
               <Link
                 to="/"

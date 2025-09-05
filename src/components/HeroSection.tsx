@@ -6,15 +6,27 @@ import heroImage from "@/assets/hero-church.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary via-primary-light to-primary-glow overflow-hidden">
-      {/* Background Image with Overlay */}
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary via-primary-light to-primary-glow overflow-hidden pt-20">
+      {/* Background Video/Image with Overlay */}
       <div className="absolute inset-0">
+        {/* Video Background - Can be enabled */}
+        {/* <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline 
+          className="w-full h-full object-cover opacity-30"
+        >
+          <source src="/path-to-video.mp4" type="video/mp4" />
+        </video> */}
+        
+        {/* Fallback Image Background */}
         <img
           src={heroImage}
           alt="Abundant Life Worship sanctuary"
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover opacity-25"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/70 to-primary/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/75 to-primary/80"></div>
       </div>
 
       {/* Content */}

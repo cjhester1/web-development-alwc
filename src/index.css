@@ -50,6 +50,7 @@ All colors MUST be HSL.
     /* Abundant Life brand gradients */
     --hero-gradient: linear-gradient(135deg, hsl(230 85% 32%), hsl(43 63% 60%), hsl(359 99% 21%));
     --section-bg: linear-gradient(180deg, hsl(0 0% 99%), hsl(230 85% 98%));
+    --professional-spacing: 6rem;
     --card-shadow: 0 4px 20px -2px hsl(230 85% 32% / 0.1);
     --hero-shadow: 0 10px 40px -10px hsl(230 85% 32% / 0.3);
     
